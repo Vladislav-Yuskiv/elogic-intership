@@ -9,6 +9,9 @@
             padding-left: 0;
             padding-right: 0;
         }
+        .nav-sections{
+            margin-bottom: 0;
+        }
     }
 
     h1,
@@ -22,6 +25,12 @@
         margin-top: 0;
     }
 
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .list {
         list-style: none;
     }
@@ -66,19 +75,72 @@
         text-decoration: none;
         font-size: 1em;
         border-bottom: 1px solid @color-elogic-black;
+
+            &:hover{
+                color: @color-elogic-gray;
+                border-bottom: 1px solid @color-elogic-gray ;
+
+            }
     }
 }
-    .baner-link:hover{
-        color: @color-elogic-gray;
-        border-bottom: 1px solid @color-elogic-gray ;
+    //----------------------------------------------------
+         .categories{
+             text-align: center;
+         }
+       .category-clocks,
+       .category-newLight {
+           background-color: #f3f3f3;
+           padding: 0 30px 30px 30px;
+       }
+        .category-content {
+        .category-link {
+            color: @color-elogic-black;
+            text-decoration: none;
+            font-size: 1em;
+            border-bottom: 1px solid @color-elogic-black;
+
+            &:hover {
+                color: @color-elogic-gray;
+                border-bottom: 1px solid @color-elogic-gray;
+            }
+        }
+            .category-description{
+                    color: @color-elogic-gray;
+                }
 
     }
+    .category-clocks{
+        margin-bottom: 30px;
+    }
+
 }
+
+// До 480px
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .category-clocks,
+    .category-newLight {
+        text-align: center;
+
+    }
+
+    .photo-category{
+        margin-bottom: 20px;
+    }
+    .category-description{
+        display: none;
+    }
+    .category-title{
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+    }
+}
+
 //
-//  Mobile до 640
+//  Mobile від 481 до 640
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+
   .baner-wrapper{
       flex-direction: column-reverse;
       text-align: center;
@@ -99,18 +161,68 @@
     .baner-content{
         margin-top: 30px;
     }
+//    ---------------
+
+    .categories{
+        text-align: center;
+    }
+
+     .category-description{
+         display: block;
+         margin-bottom: 40px;
+     }
+    .category-title{
+        margin-bottom: 20px;
+    }
+
+
 }
 //
 //  Tablet 768-1023
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .categories{
+        text-align: left;
+    }
+    .category-clocks,
+    .category-newLight {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 20px 20px 20px;
 
+    }
+
+    .category-title{
+        margin-bottom: 10px;
+    }
 
 }
 //----------
 // Desktop 1023 ...
 //-----------
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+       .categories{
+           display: flex;
+           justify-content: center;
 
+       }
+    .category-clocks{
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+    .category-title{
+        letter-spacing: 4px;
+    }
+
+}
+// від 1440 - ....
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+        .categories{
+            .category-link{
+                font-size: 16px;
+            }
+
+        }
 }
