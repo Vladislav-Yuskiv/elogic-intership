@@ -1,0 +1,119 @@
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .cms-home.cms-index-index {
+        .page-wrapper > main.page-main {
+            max-width: 1920px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .list {
+        list-style: none;
+    }
+
+    .reset {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .baner-wrapper {
+        background-color: @color-background;
+        .lib-vendor-prefix-display(flex) ;
+        .lib-vendor-box-align(center) ;
+        justify-content: space-around;
+        padding: 10%;
+    }
+
+
+    .baner-title {
+        margin-bottom: 10px;
+
+        .lib-font-size(36) ;
+        font-weight: @font-weight-light;
+        letter-spacing: 1.5px;
+    }
+
+    .accent-color {
+        font-weight: @font-weight-semibold;
+    }
+
+    .baner-description {
+        color: @color-elogic-gray;
+        margin-bottom: 45px;
+    }
+
+    .baner-content {
+
+        .baner-link {
+
+
+        color: @color-elogic-black;
+        text-decoration: none;
+            .lib-font-size(16) ;
+        border-bottom: 1px solid @color-elogic-black;
+    }
+}
+    .baner-link:hover{
+        color: @color-elogic-gray;
+        border-bottom: 1px solid @color-elogic-gray ;
+
+    }
+}
+//
+//  Mobile до 640
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+  .baner-wrapper{
+
+      .lib-vendor-prefix-flex-direction(column-reverse) ;
+      text-align: center;
+
+  }
+  .photo-chair{
+      max-width: 75%;
+  }
+    .baner-title{
+        .lib-font-size(26) ;
+
+    }
+
+
+    .baner-description{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .baner-content{
+        margin-top: 30px;
+    }
+}
+//
+//  Tablet 768-1023
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+
+}
+//----------
+// Desktop 1023 ...
+//-----------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}
