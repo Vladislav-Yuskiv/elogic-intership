@@ -9,7 +9,8 @@
             padding-left: 0;
             padding-right: 0;
         }
-        .nav-sections{
+
+        .nav-sections {
             margin-bottom: 0;
         }
     }
@@ -31,6 +32,7 @@
         margin-left: auto;
         margin-right: auto;
     }
+
     .list {
         list-style: none;
     }
@@ -59,7 +61,7 @@
 
     .accent-color {
 
-        font-weight: @font-weight-semibold ;
+        font-weight: @font-weight-semibold;
 
     }
 
@@ -73,28 +75,31 @@
         .baner-link {
 
 
-        color: @color-elogic-black;
-        text-decoration: none;
+            color: @color-elogic-black;
+            text-decoration: none;
             .lib-font-size(16) ;
-        border-bottom: 1px solid @color-elogic-black;
+            border-bottom: 1px solid @color-elogic-black;
 
-            &:hover{
+            &:hover {
                 color: @color-elogic-gray;
-                border-bottom: 1px solid @color-elogic-gray ;
+                border-bottom: 1px solid @color-elogic-gray;
 
             }
+        }
     }
-}
+
     //----------------------------------------------------
-         .categories{
-             text-align: center;
-         }
-       .category-clocks,
-       .category-newLight {
-           background-color: @color-background;
-           padding: 0 30px 30px 30px;
-       }
-        .category-content {
+    .categories {
+        text-align: center;
+    }
+
+    .category-clocks,
+    .category-newLight {
+        background-color: @color-background;
+        padding: 0 30px 30px 30px;
+    }
+
+    .category-content {
         .category-link {
             color: @color-elogic-black;
             text-decoration: none;
@@ -106,13 +111,43 @@
                 border-bottom: 1px solid @color-elogic-gray;
             }
         }
-            .category-description{
-                    color: @color-elogic-gray;
-                }
+
+        .category-description {
+            color: @color-elogic-gray;
+        }
 
     }
-    .category-clocks{
+
+    .category-clocks {
         margin-bottom: 30px;
+    }
+
+    //------------------------------------------------------------
+
+    .products-content {
+        margin-bottom: 30px;
+
+        &::after {
+
+            content: '';
+            position: absolute;
+
+            width: 35px;
+            height: 4px;
+            margin-top: 20px;
+            background-color: black;
+        }
+
+        .products-description {
+            color: @color-elogic-gray;
+            letter-spacing: 1.5px;
+
+        }
+
+        .products-title {
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
     }
 
 }
