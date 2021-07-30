@@ -150,6 +150,45 @@
         }
     }
 
+//    ---------------------------------------------------------------
+    .sale-container{
+        background-image: url("@{baseDir}images/saleBaner.jpg");
+        background-repeat: no-repeat;
+        display: flex;
+        height: 146px;
+        background-position: left top;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sale-content{
+        margin-left: 100px;
+           .sale-title{
+               font-size: 22px;
+               letter-spacing: 1px;
+               margin-bottom: 5px;
+           }
+        .sale-description{
+            font-weight: @font-weight-light;
+            color: @color-elogic-black;
+        }
+        }
+
+    }
+    .sale-link{
+        margin-right: 100px;
+        font-weight: @font-weight-semibold;
+        text-decoration: none;
+        border-bottom: 1px solid @color-elogic-black;
+        letter-spacing: 1px;
+        color: @color-elogic-black ;
+        transition:  all .4s ease ;
+        cursor: pointer;
+
+        &:hover{
+            color: @color-elogic-black ;
+            text-decoration: none;
+
+    }
 }
 
 // До 480px
@@ -169,6 +208,14 @@
     .category-title{
         margin-bottom: 30px;
         letter-spacing: 2px;
+    }
+//    -----------------------------------------------
+    .sale-container{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.05)), url("https://i.ibb.co/Qms181R/Screenshot-2021-07-30-at-12-16-18-kare-k83990-624068820-800x800w-jpg-JPEG-Image-699-800-pixels.png");
+        height: 200px;
+    }
+    .sale-content{
+        margin-top: 25px;
     }
 }
 
@@ -211,6 +258,20 @@
          margin-bottom: 40px;
      }
     .category-title{
+        margin-bottom: 20px;
+    }
+//-------------------------------------------------------
+    .sale-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .sale-content{
+        margin-left: 0;
+        margin-bottom: 50px;
+        margin-top: 15px;
+    }
+    .sale-link{
+        margin-right: 0;
         margin-bottom: 20px;
     }
 
