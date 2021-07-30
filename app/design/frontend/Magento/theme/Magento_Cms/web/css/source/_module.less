@@ -154,16 +154,17 @@
     .sale-container{
         background-image: url("@{baseDir}images/saleBaner.jpg");
         background-repeat: no-repeat;
-        display: flex;
+        .lib-vendor-prefix-display(flex) ;
+        .lib-vendor-box-align(center);
         height: 146px;
         background-position: left top;
         justify-content: space-between;
-        align-items: center;
+
     }
     .sale-content{
         margin-left: 100px;
            .sale-title{
-               font-size: 22px;
+               .lib-font-size(22) ;
                letter-spacing: 1px;
                margin-bottom: 5px;
            }
@@ -262,8 +263,9 @@
     }
 //-------------------------------------------------------
     .sale-container{
-        flex-direction: column;
+        .lib-vendor-prefix-flex-direction(column) ;
         text-align: center;
+
     }
     .sale-content{
         margin-left: 0;
