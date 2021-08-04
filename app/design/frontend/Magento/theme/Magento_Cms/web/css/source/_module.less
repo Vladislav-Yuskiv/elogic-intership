@@ -135,7 +135,7 @@
             width: 35px;
             height: 4px;
             margin-top: 20px;
-            background-color: black;
+            background-color: @color-elogic-black;
         }
 
         .products-description {
@@ -173,24 +173,39 @@
             color: @color-elogic-black;
         }
         }
-
-    }
-    .sale-link{
+    .sale-link {
         margin-right: 100px;
         font-weight: @font-weight-semibold;
         text-decoration: none;
         border-bottom: 1px solid @color-elogic-black;
         letter-spacing: 1px;
-        color: @color-elogic-black ;
-        transition:  all .4s ease ;
+        color: @color-elogic-black;
+        transition: all .4s ease;
         cursor: pointer;
 
-        &:hover{
-            color: @color-elogic-black ;
+        &:hover {
+            color: @color-elogic-black;
             text-decoration: none;
 
+        }
     }
-}
+    //        --------------------------------------------------------------
+
+    .after-line{
+      border-bottom: 1px solid @color-elogic-lightGray;
+        .bestsellers-title,
+        .featured-title,
+        .viewed-title{
+            margin-bottom: 20px;
+            letter-spacing: 1px ;
+            color:@color-elogic-black ;
+            font-size: 18px;
+        }
+    }
+
+    }
+
+
 
 // До 480px
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {

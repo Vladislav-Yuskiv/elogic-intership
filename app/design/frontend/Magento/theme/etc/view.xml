@@ -190,6 +190,10 @@
                 <width>240</width>
                 <height>300</height>
             </image>
+            <image id="hover_product_list" type="hover">
+                 <width>308</width>
+                 <height>368</height>
+            </image>
         </images>
     </media>
     <vars module="Magento_Catalog">
