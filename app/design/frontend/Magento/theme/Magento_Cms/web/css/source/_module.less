@@ -27,8 +27,8 @@
     }
 
     .container {
-        padding-right: 15px;
-        padding-left: 15px;
+        padding-right: @indent__s + @indent__xs;
+        padding-left:  @indent__s + @indent__xs;
         margin-left: auto;
         margin-right: auto;
     }
@@ -53,7 +53,7 @@
 
 
     .baner-title {
-        margin-bottom: 10px;
+        margin-bottom: @indent__s;
         .lib-font-size(36) ;
         font-weight: @font-weight-light;
         letter-spacing: 1.5px;
@@ -67,7 +67,7 @@
 
     .baner-description {
         color: @color-elogic-gray;
-        margin-bottom: 45px;
+        margin-bottom: @indent__xl + @indent__xs ;
     }
 
     .baner-content {
@@ -96,7 +96,7 @@
     .category-clocks,
     .category-newLight {
         background-color: @color-background;
-        padding: 0 30px 30px 30px;
+        padding: 0 @indent__l @indent__l @indent__l;
     }
 
     .category-content {
@@ -119,13 +119,13 @@
     }
 
     .category-clocks {
-        margin-bottom: 30px;
+        margin-bottom: @indent__l;
     }
 
     //------------------------------------------------------------
 
     .products-content {
-        margin-bottom: 60px;
+        margin-bottom: @indent__base + @indent__xl;
 
         &::after {
 
@@ -134,8 +134,8 @@
 
             width: 35px;
             height: 4px;
-            margin-top: 20px;
-            background-color: black;
+            margin-top: @indent__base;
+            background-color: @color-elogic-black;
         }
 
         .products-description {
@@ -146,7 +146,7 @@
 
         .products-title {
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: @indent__xs;
         }
     }
 
@@ -161,13 +161,13 @@
     }
 
     .photo-category{
-        margin-bottom: 20px;
+        margin-bottom: @indent__base;
     }
     .category-description{
         display: none;
     }
     .category-title{
-        margin-bottom: 30px;
+        margin-bottom: @indent__l;
         letter-spacing: 2px;
     }
 }
@@ -194,11 +194,11 @@
 
 
     .baner-description{
-        margin-top: 20px;
-        margin-bottom: 30px;
+        margin-top: @indent__base;
+        margin-bottom: @indent__l;
     }
     .baner-content{
-        margin-top: 30px;
+        margin-top: @indent__l;
     }
 //    ---------------
 
@@ -208,10 +208,10 @@
 
      .category-description{
          display: block;
-         margin-bottom: 40px;
+         margin-bottom: @indent__xl;
      }
     .category-title{
-        margin-bottom: 20px;
+        margin-bottom: @indent__base;
     }
 
 
@@ -229,12 +229,12 @@
         .lib-vendor-prefix-display(flex) ;
         .lib-vendor-box-align(center);
         justify-content: space-evenly;
-        padding: 0 20px 20px 20px;
+        padding: 0 @indent__base @indent__base @indent__base;
 
     }
 
     .category-title{
-        margin-bottom: 10px;
+        margin-bottom: @indent__s;
     }
     .container{
         max-width: 720px;
@@ -253,7 +253,7 @@
        }
     .category-clocks{
         margin-bottom: 0;
-        margin-right: 30px;
+        margin-right: @indent__l;
     }
     .category-title{
         letter-spacing: 4px;
