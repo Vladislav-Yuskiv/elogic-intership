@@ -27,8 +27,8 @@
     }
 
     .container {
-        padding-right: 15px;
-        padding-left: 15px;
+        padding-right: @indent__s + @indent__xs ;
+        padding-left: @indent__s + @indent__xs ;
         margin-left: auto;
         margin-right: auto;
     }
@@ -53,8 +53,8 @@
 
 
     .baner-title {
-        margin-bottom: 10px;
-        .lib-font-size(36) ;
+        margin-bottom: @indent__s;
+        .lib-font-size(@font-size__l * 2) ;
         font-weight: @font-weight-light;
         letter-spacing: 1.5px;
     }
@@ -67,7 +67,7 @@
 
     .baner-description {
         color: @color-elogic-gray;
-        margin-bottom: 45px;
+        margin-bottom: @indent__xl + @indent__xs;
     }
 
     .baner-content {
@@ -77,7 +77,7 @@
 
             color: @color-elogic-black;
             text-decoration: none;
-            .lib-font-size(16) ;
+            .lib-font-size(@font-size__l) ;
             border-bottom: 1px solid @color-elogic-black;
 
             &:hover {
@@ -96,14 +96,14 @@
     .category-clocks,
     .category-newLight {
         background-color: @color-background;
-        padding: 0 30px 30px 30px;
+        padding: 0 @indent__l @indent__l @indent__l;
     }
 
     .category-content {
         .category-link {
             color: @color-elogic-black;
             text-decoration: none;
-            .lib-font-size(16) ;
+            .lib-font-size(@font-size__l) ;
             border-bottom: 1px solid @color-elogic-black;
 
             &:hover {
@@ -119,13 +119,13 @@
     }
 
     .category-clocks {
-        margin-bottom: 30px;
+        margin-bottom: @indent__l;
     }
 
     //------------------------------------------------------------
 
     .products-content {
-        margin-bottom: 60px;
+        margin-bottom: @indent__base + @indent__xl;
 
         &::after {
 
@@ -134,8 +134,8 @@
 
             width: 35px;
             height: 4px;
-            margin-top: 20px;
-            background-color: black;
+            margin-top: @indent__base;
+            background-color: @color-elogic-black;
         }
 
         .products-description {
@@ -146,7 +146,7 @@
 
         .products-title {
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: @indent__xs;
         }
     }
 
@@ -162,11 +162,11 @@
 
     }
     .sale-content{
-        margin-left: 100px;
+        margin-left: @indent__m * 4;
            .sale-title{
-               .lib-font-size(22) ;
+               .lib-font-size(@font-size__xl) ;
                letter-spacing: 1px;
-               margin-bottom: 5px;
+               margin-bottom: @indent__xs;
            }
         .sale-description{
             font-weight: @font-weight-light;
@@ -176,7 +176,7 @@
 
     }
     .sale-link{
-        margin-right: 100px;
+        margin-right: @indent__m * 4;
         font-weight: @font-weight-semibold;
         text-decoration: none;
         border-bottom: 1px solid @color-elogic-black;
@@ -201,13 +201,13 @@
     }
 
     .photo-category{
-        margin-bottom: 20px;
+        margin-bottom: @indent__base;
     }
     .category-description{
         display: none;
     }
     .category-title{
-        margin-bottom: 30px;
+        margin-bottom: @indent__l;
         letter-spacing: 2px;
     }
 //    -----------------------------------------------
@@ -216,7 +216,7 @@
         height: 200px;
     }
     .sale-content{
-        margin-top: 25px;
+        margin-top: @indent__m;
     }
 }
 
@@ -236,17 +236,17 @@
       max-width: 75%;
   }
     .baner-title{
-        .lib-font-size(26) ;
+        .lib-font-size(@h2__font-size) ;
 
     }
 
 
     .baner-description{
-        margin-top: 20px;
-        margin-bottom: 30px;
+        margin-top: @indent__base;
+        margin-bottom: @indent__l;
     }
     .baner-content{
-        margin-top: 30px;
+        margin-top: @indent__l;
     }
 //    ---------------
 
@@ -256,10 +256,10 @@
 
      .category-description{
          display: block;
-         margin-bottom: 40px;
+         margin-bottom: @indent__xl;
      }
     .category-title{
-        margin-bottom: 20px;
+        margin-bottom: @indent__base;
     }
 //-------------------------------------------------------
     .sale-container{
@@ -269,12 +269,12 @@
     }
     .sale-content{
         margin-left: 0;
-        margin-bottom: 50px;
-        margin-top: 15px;
+        margin-bottom: @indent__xl + @indent__s;
+        margin-top: @indent__s + @indent__xs;
     }
     .sale-link{
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: @indent__base;
     }
 
 
@@ -292,12 +292,12 @@
         .lib-vendor-prefix-display(flex) ;
         .lib-vendor-box-align(center);
         justify-content: space-evenly;
-        padding: 0 20px 20px 20px;
+        padding: 0 @indent__base @indent__base @indent__base;
 
     }
 
     .category-title{
-        margin-bottom: 10px;
+        margin-bottom: @indent__s;
     }
     .container{
         max-width: 720px;
@@ -316,7 +316,7 @@
        }
     .category-clocks{
         margin-bottom: 0;
-        margin-right: 30px;
+        margin-right: @indent__l;
     }
     .category-title{
         letter-spacing: 4px;
@@ -330,7 +330,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
         .categories{
             .category-link{
-                .lib-font-size(16) ;
+                .lib-font-size(@font-size__l) ;
             }
 
         }
