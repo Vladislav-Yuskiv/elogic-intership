@@ -205,6 +205,72 @@
         }
     }
 
+
+//    ------------------------------------------------------------------------------------
+    .news-content {
+        margin-bottom: @indent__base + @indent__xl;
+
+        &::after {
+
+            content: '';
+            position: absolute;
+
+            width: 35px;
+            height: 4px;
+            margin-top: @indent__base;
+            background-color: @color-elogic-black;
+        }
+
+        .news-description {
+            color: @color-elogic-gray;
+            letter-spacing: 1.5px;
+
+        }
+
+        .news-title {
+            letter-spacing: 1px;
+            margin-bottom: @indent__xs;
+        }
+    }
+    .blog-list{
+        .lib-vendor-prefix-display(flex) ;
+        list-style: none;
+        padding: 0;
+
+        .blog-item:not(:last-child){
+            margin-bottom: @indent__m;
+
+        }
+
+          .blog-photo{
+              margin-bottom: @indent__m;
+          }
+          .blog-title{
+              margin-bottom: @indent__s + @indent__xs;
+              color: @color-elogic-black;
+              .lib-font-size(@h4__font-size) ;
+              text-transform: uppercase;
+              line-height: 1.5;
+          }
+        .data-container{
+            margin-bottom:@indent__s + @indent__xs;
+            color: @color-elogic-link;
+            font-size: @font-size__s;
+            .icon{
+                margin-right: @indent__s;
+            }
+
+            .data-time{
+                font-style: italic ;
+            }
+        }
+
+        .blog-description{
+            letter-spacing: .25px;
+            color: @color-elogic-link;
+        }
+    }
+
 }
 
 
@@ -235,6 +301,7 @@
         margin-top: @indent__m;
     }
 }
+
 
 //
 //  Mobile від 481 до 640
@@ -292,9 +359,29 @@
         margin-right: 0;
         margin-bottom: @indent__base;
     }
+//    ------------------------
+    .blog-list{
+        .blog-item:nth-child(2),
+        .blog-item:nth-child(3){
+            display: none;
+        }
+    }
 
 
 }
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .blog-list {
+        .blog-item {
+            &:nth-child(3) {
+                display: none;
+            }
+            &:not(:last-child){
+                margin-right: @indent__m;
+            }
+        }
+    }
+}
+
 //
 //  Tablet 768-1023
 //  _____________________________________________
@@ -318,6 +405,7 @@
     .container{
         max-width: 720px;
     }
+//    ------------------------------------------
 
 }
 //----------
@@ -339,6 +427,12 @@
     }
     .container{
         max-width: 940px;
+    }
+//    ----------------------------
+    .blog-list {
+        .blog-item:nth-child(3) {
+            display: block;
+        }
     }
 
 }
