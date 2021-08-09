@@ -271,6 +271,70 @@
         }
     }
 
+//    -------------------------------------------------------------
+    .shop-brand {
+        text-align: center;
+        margin-bottom: @indent__l;
+        overflow: hidden;
+
+        &-title {
+            color: @color-elogic-black;
+
+            font-weight: @font-weight-medium;
+            .lib-font-size(@h2__font-size) ;
+            text-transform: capitalize;
+            margin-bottom: @indent__s;
+            display: inline-block;
+            line-height: 30px;
+            padding: 0 @indent__xs;
+            position: relative;
+
+
+
+            &::before {
+                content: "";
+                display: block;
+                width: 1168px;
+                position: absolute;
+                top: 50%;
+                border-top: 1px solid @color-elogic-lightGray;
+                left: 100%;
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: 1168px;
+                position: absolute;
+                top: 50%;
+                border-top: 1px solid @color-elogic-lightGray;
+                right: 100%;
+            }
+
+
+        }
+    }
+    .brand-list{
+        .lib-vendor-prefix-display(flex) ;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+
+        .brand-name{
+            margin-top: @indent__s;
+
+            &-link{
+                text-decoration: none;
+                color: @color-elogic-black;
+                transition:  all .4s ease ;
+
+                &:hover{
+                    color: @color-elogic-link;
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -300,6 +364,16 @@
     .sale-content{
         margin-top: @indent__m;
     }
+
+//    ------------------------------------
+    .brand-list{
+        .brand-item:nth-child(2),
+        .brand-item:nth-child(3),
+        .brand-item:nth-child(4),
+        .brand-item:nth-child(5) {
+            display: none;
+        }
+    }
 }
 
 
@@ -309,64 +383,71 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
 
-    .baner-wrapper{
+    .baner-wrapper {
 
         .lib-vendor-prefix-flex-direction(column-reverse) ;
         text-align: center;
 
     }
-    .photo-chair{
+    .photo-chair {
         max-width: 75%;
     }
-    .baner-title{
+    .baner-title {
         .lib-font-size(@h2__font-size) ;
 
     }
 
 
-    .baner-description{
+    .baner-description {
         margin-top: @indent__base;
         margin-bottom: @indent__l;
     }
-    .baner-content{
+    .baner-content {
         margin-top: @indent__l;
     }
     //    ---------------
 
-    .categories{
+    .categories {
         text-align: center;
     }
 
-    .category-description{
+    .category-description {
         display: block;
         margin-bottom: @indent__xl;
     }
-    .category-title{
+    .category-title {
         margin-bottom: @indent__base;
     }
     //-------------------------------------------------------
-    .sale-container{
+    .sale-container {
         .lib-vendor-prefix-flex-direction(column) ;
         text-align: center;
 
     }
-    .sale-content{
+    .sale-content {
         margin-left: 0;
         margin-bottom: @indent__xl + @indent__s;
         margin-top: @indent__s + @indent__xs;
     }
-    .sale-link{
+    .sale-link {
         margin-right: 0;
         margin-bottom: @indent__base;
     }
-//    ------------------------
-    .blog-list{
+    //    ------------------------
+    .blog-list {
         .blog-item:nth-child(2),
-        .blog-item:nth-child(3){
+        .blog-item:nth-child(3) {
             display: none;
         }
     }
 
+    //    -------------------------------------
+    .brand-list{
+    .brand-item:nth-child(4),
+    .brand-item:nth-child(5) {
+        display: none;
+    }
+  }
 
 }
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
@@ -380,6 +461,13 @@
             }
         }
     }
+//    ------------------------------------------
+
+.brand-list{
+    .brand-item:nth-child(5) {
+        display: none;
+    }
+}
 }
 
 //
@@ -405,7 +493,13 @@
     .container{
         max-width: 720px;
     }
-//    ------------------------------------------
+// --------------------------------------------------------
+    .shop-brand {
+        &-title {
+            font-weight: @font-weight-regular;
+            .lib-font-size(@font-size__l * 2) ;
+        }
+    }
 
 }
 //----------
@@ -431,6 +525,12 @@
 //    ----------------------------
     .blog-list {
         .blog-item:nth-child(3) {
+            display: block;
+        }
+    }
+//    --------------------------
+    .brand-list{
+        .brand-item:nth-child(5) {
             display: block;
         }
     }
