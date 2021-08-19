@@ -1,3 +1,4 @@
+
 //  Common
 //  _____________________________________________
 
@@ -71,7 +72,6 @@
     .baner-description {
         color: @color-elogic-gray;
         margin-bottom: @indent__xl + @indent__xs;
-
     }
 
     .baner-content {
@@ -154,7 +154,7 @@
         }
     }
 
-//    ---------------------------------------------------------------
+    //    ---------------------------------------------------------------
     .sale-container{
         background-image: url("@{baseDir}images/saleBaner.jpg");
         background-repeat: no-repeat;
@@ -167,17 +167,17 @@
     }
     .sale-content{
         margin-left: @indent__m * 4;
+
            .sale-title{
                .lib-font-size(@font-size__xl) ;
                letter-spacing: 1px;
                margin-bottom: @indent__xs;
            }
+
         .sale-description{
             font-weight: @font-weight-light;
             color: @color-elogic-black;
         }
-        }
-
     }
     .sale-link{
         margin-right: @indent__m * 4;
@@ -193,8 +193,25 @@
             color: @color-elogic-black ;
             text-decoration: none;
 
+        }
     }
+    //        --------------------------------------------------------------
+
+    .after-line{
+        border-bottom: 1px solid @color-elogic-lightGray;
+        .bestsellers-title,
+        .featured-title,
+        .viewed-title{
+            margin-bottom: @indent__base ;
+            letter-spacing: 1px ;
+            color:@color-elogic-black ;
+            .lib-font-size(@font-size__l) ;
+
+        }
+    }
+
 }
+
 
 // До 480px
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
@@ -214,7 +231,7 @@
         margin-bottom: @indent__l;
         letter-spacing: 2px;
     }
-//    -----------------------------------------------
+    //    -----------------------------------------------
     .sale-container{
         background-image: linear-gradient(rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.05)), url("https://i.ibb.co/Qms181R/Screenshot-2021-07-30-at-12-16-18-kare-k83990-624068820-800x800w-jpg-JPEG-Image-699-800-pixels.png");
         height: 200px;
@@ -230,15 +247,15 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
 
-  .baner-wrapper{
+    .baner-wrapper{
 
-      .lib-vendor-prefix-flex-direction(column-reverse) ;
-      text-align: center;
+        .lib-vendor-prefix-flex-direction(column-reverse) ;
+        text-align: center;
 
-  }
-  .photo-chair{
-      max-width: 75%;
-  }
+    }
+    .photo-chair{
+        max-width: 75%;
+    }
     .baner-title{
         .lib-font-size(@h2__font-size) ;
 
@@ -252,20 +269,22 @@
     .baner-content{
         margin-top: @indent__l;
     }
-//    ---------------
+    //    ---------------
 
     .categories{
         text-align: center;
     }
 
+
      .category-description{
          display: block;
          margin-bottom: @indent__xl;
      }
+>
     .category-title{
         margin-bottom: @indent__base;
     }
-//-------------------------------------------------------
+    //-------------------------------------------------------
     .sale-container{
         .lib-vendor-prefix-flex-direction(column) ;
         text-align: center;
@@ -313,12 +332,12 @@
 // Desktop 1023 ...
 //-----------
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-       .categories{
-           .lib-vendor-prefix-display(flex) ;
-           justify-content: center;
+    .categories{
+        .lib-vendor-prefix-display(flex) ;
+        justify-content: center;
 
 
-       }
+    }
     .category-clocks{
         margin-bottom: 0;
         margin-right: @indent__l;

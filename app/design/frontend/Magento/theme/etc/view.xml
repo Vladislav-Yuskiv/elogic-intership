@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
     <media>
         <images module="Magento_Catalog">
@@ -6,7 +7,10 @@
                 <width>308</width>
                 <height>368</height>
             </image>
+            <image id="hover_product_list" type="hover">
+                 <width>308</width>
+                 <height>368</height>
+            </image>
         </images>
-
     </media>
 </view>
