@@ -92,13 +92,124 @@
     .page-header {
         .lib-css(background-color, @header__background-color);
         border-bottom: 1px solid @border-color__base;
-        margin-bottom: @indent__base;
+
 
         .panel.wrapper {
             .lib-css(background-color, @header-panel__background-color);
             .lib-css(color, @header-panel__text-color);
         }
+        .header.content{
+            padding: @indent__base 0;
+            margin: 0;
+            max-width: 100%;
+
+
+
+            .head-container{
+                .lib-vendor-prefix-display(flex) ;
+                .lib-vendor-box-align(center);
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .logo_wrap{
+                flex: 0 0 100%;
+                padding-bottom: @indent__base;
+                .nav-toggle{
+                    top: 78px;
+
+                    &::before{
+                        color: @color-elogic-black;
+                    }
+
+                }
+            }
+            .action_wrap{
+                .lib-vendor-prefix-display(flex) ;
+                .lib-vendor-box-align(center);
+                justify-content: flex-end;
+                flex: 0 0 100%;
+            }
+
+
+        }
+
+
+        .header.content.fixed{
+            background-color:  rgba(255,255,255,.95);
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            position: fixed;
+            padding-bottom: 0;
+            box-shadow: 0 0 5px 0 rgb(0 ,0 ,0 , .2) ;
+            -webkit-animation-name: fadeInDown;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: normal;
+            -webkit-animation-play-state: running;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: anim_titles;
+            -moz-animation-duration: 5s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-direction: normal;
+            -moz-animation-play-state: running;
+            -moz-animation-fill-mode: forwards;
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            -webkit-animation-iteration-count: 1;
+            -moz-animation-iteration-count: 1;
+            -webkit-animation-duration: .7s;
+            -moz-animation-duration: .7s;
+            -webkit-animation-delay: 0s;
+            -moz-animation-delay: 0s;
+            -webkit-animation-timing-function: ease-out;
+
+        }
     }
+
+
+    //LOG IN
+
+    .authorization-link{
+        margin-bottom: 0;
+        a{
+            text-transform: uppercase;
+            .lib-font-size(0) ;
+            letter-spacing: 1px;
+            position: relative;
+            color: @color-elogic-black;
+            transition: all .4s ease 0s;
+
+            &:hover{
+                color: @color-elogic-link;
+                text-decoration: none;
+
+                &::before{
+                    color: @color-elogic-link;
+                }
+            }
+
+            &::before{
+                content: '\f007';
+                color: @color-elogic-black;
+                .lib-font-size(@h4__font-size) ;
+                vertical-align: baseline;
+                font-family: @font-family-awesome;
+                transition: all .4s ease 0s;
+                font-weight: @font-weight-regular;
+            }
+
+
+        }
+
+    }
+
+
+
 
     .header.panel {
         > .header.links {
@@ -139,16 +250,19 @@
         }
     }
 
+
+
     .logo {
-        float: left;
-        margin: 0 0 @indent__s @indent__xl;
-        max-width: 50%;
-        position: relative;
-        z-index: 5;
+        padding: 0;
+        max-width: 170px;
+        float: none;
+        margin: 0;
+
 
         img {
             display: block;
             height: auto;
+            margin: 0 auto;
         }
 
         .page-print & {
@@ -736,4 +850,86 @@
             }
         }
     }
+
+    .page-header {
+        .header.content{
+            .head-container{
+                flex-wrap: wrap;
+            }
+
+            .action_wrap{
+                .lib-vendor-prefix-display(flex) ;
+                .lib-vendor-box-align(center);
+                flex: 0 0 25% ;
+                justify-content: flex-end;
+            }
+            .menu_wrap{
+                flex: 0 0 75%;
+            }
+            .logo_wrap{
+                flex: 0 0 100% ;
+                padding: 0;
+            }
+        }
+    }
+
+
+    .authorization-link{
+        a{
+            .lib-font-size(@h5__font-size) ;
+
+            &::before{
+                display: none;
+            }
+        }
+    }
 }
+//----------
+// Desktop 1023 ...
+//-----------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+    .page-header {
+        .header.content{
+          &.fixed{
+              padding: 0;
+          }
+
+            .action_wrap{
+
+                flex: 0 0 25% ;
+
+            }
+            .menu_wrap{
+                flex: 0 0 50%;
+            }
+            .logo_wrap{
+                flex: 0 0 25% ;
+                .logo{
+                    img{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .ui-menu.ui-widget-content {
+        .dropdown.level-top {
+            .nav-anchor.ui-corner-all {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+// від 1440 - ....
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .ui-menu.ui-widget-content {
+        .dropdown.level-top {
+            .nav-anchor.ui-corner-all {
+                margin-right: 25px;
+            }
+        }
+    }
+}
+

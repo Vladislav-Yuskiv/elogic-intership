@@ -82,6 +82,7 @@
             text-decoration: none;
             .lib-font-size(@font-size__l) ;
             border-bottom: 1px solid @color-elogic-black;
+            transition: all .4s ease 0s;
 
             &:hover {
                 color: @color-elogic-gray;
@@ -108,6 +109,7 @@
             text-decoration: none;
             .lib-font-size(@font-size__s) ;
             border-bottom: 1px solid @color-elogic-black;
+            transition: all .4s ease 0s;
 
             &:hover {
                 color: @color-elogic-gray;
@@ -352,10 +354,12 @@
             font-weight: @font-weight-medium;
             line-height: 1;
             margin-bottom: @indent__xl;
+            position: relative;
 
             .title-link{
                 color: inherit;
                 transition:  all .4s ease ;
+
 
                 &:hover{
                     color: @color-elogic-link;
@@ -380,6 +384,9 @@
                     cursor: pointer;
                     transition:  all .4s ease ;
                     font-weight: @font-weight-bold;
+                    position: absolute;
+                    right: 0;
+                    top: -7px;
 
                 }
             }
@@ -463,8 +470,8 @@
                 -ms-transition: all .3s ease;
                 -o-transition: all .3s ease;
                 transition: all .3s ease;
-                background: #222;
-                color: #fff;
+                background: @color-elogic-black;
+                color: @color-elogic-white;
                 z-index: 999;
             }
 
@@ -801,8 +808,24 @@
 
 //--------------------------------------------------------------
 
+    .page-footer {
+        .links-wrapper {
+                .lib-vendor-prefix-display(flex) ;
+            .footer-link-container{
+                flex-basis: 25%;
 
+            }
 
+            .links-title{
+                .title-link::after{
+                    display: none;
+                }
+            }
+            .links-list{
+                display: block!important; // overwrite collapsible styles
+            }
+        }
+    }
 
 }
 //----------
@@ -839,21 +862,12 @@
     }
 //    ------------------------------------------------------
     .page-footer{
-        .links-wrapper{
-            .lib-vendor-prefix-display(flex) ;
-            justify-content: space-between;
 
-            .links-title{
-                .title-link::after{
-                    display: none;
-                }
-            }
-        }
 
         .follow-container {
             .lib-vendor-prefix-display(flex) ;
             .lib-vendor-box-align(center);
-            justify-content: space-between;
+
         }
       .contact-container {
           .back-top{
@@ -861,6 +875,7 @@
           }
           .icons-wrapper {
               margin-top: 0;
+              margin-left: auto;
           }
       }
     }
