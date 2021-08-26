@@ -3,7 +3,15 @@ var config ={
         'Magento_Theme/js/theme' ,
 ] ,
     paths: {
-        'elogicFootercollapsible': 'js/footer-collapsible',
+        slick: 'js/plugins/slick.min',
+        elogicSlider: 'js/slider',
+        elogicFootercollapsible: 'js/footer-collapsible'
+    },
+
+    shim: {
+        slick: {
+            deps: ['jquery'],
+        },
     },
 
 }
