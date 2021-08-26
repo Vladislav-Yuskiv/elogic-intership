@@ -34,7 +34,6 @@ define([
                     $(this.options.element).collapsible( "destroy" );
                 }.bind(this),
                 exit: function () {
-                    console.log("MAGENTO LOVE") ;
                     $(this.options.element).collapsible(this.options.collapsibleOptions);
                 }.bind(this),
             })
