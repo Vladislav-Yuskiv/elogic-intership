@@ -25,6 +25,16 @@
 & when (@media-common = true) {
 
 
+    body {
+        .page-main {
+
+            .category-view,
+            .breadcrumbs {
+                padding: 0 @indent__xs + @indent__s;
+            }
+        }
+    }
+
     .slick-list.draggable{
         overflow: hidden;
     }
@@ -436,6 +446,95 @@
             }
         }
     }
+
+    // Select
+    .catalog-category-view {
+        .select2-container {
+            border: 1px solid @color-elogic-lightGray;
+            transition: all .4s ease;
+
+            .select2-selection {
+                border: none;
+                background: transparent;
+                padding: @indent__s + @indent__xs 0;
+                position: relative;
+
+                &:before {
+                    content: '\f107';
+                    .lib-css(font-family, @font-family-awesome);
+                    .lib-css(font-weight, 900);
+                    .lib-css(color, @color-elogic-link);
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &__arrow {
+                    display: none;
+                }
+
+                .select2-selection__rendered {
+                    display: none;
+                }
+            }
+
+            &--open {
+                .lib-css(border-color, @color-elogic-black);
+
+                .select2-selection {
+                    &:before {
+                        content: '\f106';
+                    }
+                }
+
+                .select2-dropdown {
+                    border: 1px solid @color-elogic-black;
+                    transition: .3s ease-in-out;
+
+                    .select2-results__options {
+                        li {
+                            margin: 0;
+                            .lib-css(background-color, @color-elogic-lightGray);
+                            .lib-css(color, @color-elogic-black);
+
+                            &:nth-child(2n) {
+                                .lib-css(background-color, @color-elogic-white);
+                            }
+                        }
+
+                        .select2-results__option {
+                            &--highlighted {
+                                .lib-css(color, @color-elogic-white);
+                                background-color: @color-elogic-lightBlack;
+
+                                &:nth-child(2n) {
+                                    .lib-css(color, @color-elogic-white);
+                                    .lib-css(background-color, @color-elogic-black);
+                                }
+                            }
+
+                            &--selected {
+                                .lib-css(background-color, @color-elogic-black);
+                                .lib-css(color, @color-elogic-white);
+
+                                &:nth-child(2n) {
+                                    .lib-css(background-color, @color-elogic-black);
+                                    .lib-css(color, @color-elogic-white);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        }
+
+
+
+//    ----------------------------------------------------------------------------------------
+
+
 
 }
 
