@@ -1,0 +1,106 @@
+// Common
+& when (@media-common = true) {
+    .block.block-search{
+        width: auto;
+        padding: 0;
+        margin-left: @indent__s + @indent__xs;
+        margin-top: 0;
+        position: relative;
+
+        .control{
+            border-top: none;
+        }
+
+        .form.minisearch{
+            min-width: 270px;
+            height: 43px;
+            line-height: 43px;
+            display: none;
+            position: absolute;
+            top: 175%;
+            right: 0;
+            z-index: 1000;
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+            .lib-font-size(@h4__font-size) ;
+            text-align: left;
+            list-style: none;
+            background-color: rgb(34, 34, 34);
+            left: auto;
+            border: 1px solid rgba(210, 210, 210, 0.176);
+
+
+
+            input[type=text].input-text {
+                background-color: inherit;
+                border: none ;
+                position: absolute;
+                padding: 0 @indent__xl + @indent__xs 0 @indent__m;
+                color: @color-elogic-white;
+                left: 0;
+                margin: 0;
+                top: 5px;
+
+
+
+                &::placeholder{
+                    color: @color-elogic-white;
+                }
+
+                &:focus{
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+
+            .actions{
+                .action.search{
+
+                    &::before{
+                        vertical-align: middle;
+                        color: @color-elogic-white;
+                    }
+                }
+            }
+
+        }
+
+
+
+
+    }
+}
+// До 480px
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+
+}
+
+//
+//  Mobile від 481 до 640
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+
+}
+//
+//  Tablet 768-1023
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block.block-search{
+          .form.minisearch{
+            min-width: 370px;
+        }
+    }
+}
+//----------
+// Desktop 1023 ...
+//-----------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}
+// від 1440 - ....
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+
+}

@@ -1,0 +1,186 @@
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .page-footer{
+       background-color: @color-elogic-white !important;// To rewrite the background for the footer
+        padding-bottom: 0 !important; //To rewrite paddding in page-footer
+        .footer.content {
+            padding: @indent__xl 0;
+            margin: 0;
+            max-width: 100%;
+            margin-bottom: 0;
+            background-color: @color-background-newsletter;
+        }
+    }
+            border: 0 ;
+
+            .title {
+
+    }
+    .title {
+
+        .newsletter-title {
+            color: @color-elogic-black;
+            letter-spacing: 2px;
+            font-weight: @font-weight-semibold;
+            text-transform: uppercase;
+            .lib-font-size(@h2__font-size) ;
+            margin-bottom: @indent__s;
+        }
+
+        &-description {
+            color: @color-elogic-link;
+            margin-top: @indent__s;
+        }
+    }
+
+    .footer.content {
+      border-top: none;
+    .block.newsletter {
+        .lib-vendor-prefix-display(flex) ;
+        .lib-vendor-box-align(center);
+        float: none;
+        justify-content: space-between;
+        margin-bottom: 0;
+
+        .content {
+            .form {
+                .lib-vendor-prefix-display(flex) ;
+            }
+        }
+
+        .control {
+            .label {
+                &:extend(.abs-visually-hidden all);
+            }
+
+            input[type="email"] {
+                border: 1px solid @color-border-input;
+                height: 50px;
+                background-color: transparent;
+                padding-left: @indent__m;
+
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &::placeholder {
+                    color: @color-elogic-link;
+                }
+            }
+        }
+    }
+}
+    .actions {
+        .subscribe {
+            padding: 17px @indent__l + @indent__xs;
+            border: 0;
+            margin:  0;
+            color: @color-elogic-white;
+            background: @color-elogic-black;
+            font-style: normal;
+            .lib-font-size(@h4__font-size) ;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: @indent__xs;
+
+              &:hover{
+                  background: @color-elogic-black;
+                  border: none;
+                  color: @color-elogic-white;
+              }
+        }
+
+    }
+}
+
+// До 480px
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .content {
+        .form {
+            .lib-vendor-prefix-flex-direction(column) ;
+            text-align: center;
+        }
+    }
+    .actions {
+        .subscribe {
+            margin-left: 0;
+            width: 100%;
+            margin-top: @indent__xs;
+        }
+    }
+    .footer.content {
+
+        .block.newsletter {
+            .lib-vendor-prefix-flex-direction(column) ;
+            text-align: center ;
+
+            .title{
+                margin-bottom: @indent__m	;
+            }
+        }
+
+
+
+    }
+
+}
+
+//
+//  Mobile від 481 до 640
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .content {
+        .form {
+            .lib-vendor-prefix-flex-direction(column) ;
+            text-align: center;
+        }
+    }
+    .actions {
+        .subscribe {
+            margin-left: 0;
+            width: 100%;
+            margin-top: @indent__base ;
+        }
+    }
+    .footer.content {
+
+        .block.newsletter {
+            .lib-vendor-prefix-flex-direction(column) ;
+            text-align: center ;
+
+            .title{
+                margin-bottom: @indent__m	;
+            }
+        }
+
+
+
+    }
+}
+//
+//  Tablet 768-1023
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}
+//----------
+// Desktop 1023 ...
+//-----------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .title {
+
+        .newsletter-title {
+            .lib-font-size(@indent__l) ;
+
+        }
+    }
+}
+// від 1440 - ....
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+
+}

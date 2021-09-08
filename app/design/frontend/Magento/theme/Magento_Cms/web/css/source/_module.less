@@ -3,7 +3,9 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-
+ body{
+     margin: 0;
+ }
     .cms-home.cms-index-index {
         .page-wrapper > main.page-main {
             max-width: 1920px;
@@ -83,6 +85,7 @@
             text-decoration: none;
             .lib-font-size(@font-size__l) ;
             border-bottom: 1px solid @color-elogic-black;
+            transition: all .4s ease 0s;
 
             &:hover {
                 color: @color-elogic-gray;
@@ -109,6 +112,7 @@
             text-decoration: none;
             .lib-font-size(@font-size__s) ;
             border-bottom: 1px solid @color-elogic-black;
+            transition: all .4s ease 0s;
 
             &:hover {
                 color: @color-elogic-gray;
@@ -340,6 +344,220 @@
         }
     }
 
+
+//    -------------------------------------------------------------------
+    .page-footer {
+        .links-wrapper{
+            //!!!!!!!!!!!!!!!!!!
+            padding: 100px 0 68px;
+        }
+        .links-title{
+            color: @color-elogic-black;
+            .lib-font-size(@font-size-16) ;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: @font-weight-medium;
+            line-height: 1;
+            margin-bottom: @indent__xl;
+            position: relative;
+
+            .title-link{
+                color: inherit;
+                transition:  all .4s ease ;
+
+
+                &:hover{
+                    color: @color-elogic-link;
+                    text-decoration: none;
+
+                    &::after{
+                        background-color: @color-elogic-black;
+                        color: @color-elogic-white;
+                    }
+                }
+                &::after{
+                    content: "\f067";
+                    font-family: @font-family-awesome;
+                    .lib-font-size(@font-size__s) ;
+                    float: right;
+                    line-height: 30px;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    color: @color-elogic-black;
+                    background: @color-elogic-lightGray;
+                    cursor: pointer;
+                    transition:  all .4s ease ;
+                    font-weight: @font-weight-bold;
+                    position: absolute;
+                    right: 0;
+                    top: -7px;
+
+                }
+            }
+
+
+
+        }
+        .links-list{
+            list-style: none;
+            padding: 0;
+
+            .link-item{
+                padding-bottom: @indent__xs + @indent__s;
+                margin-bottom: 0;
+                color: @color-elogic-link;
+                &:hover{
+                    color: @color-elogic-black;
+
+                    .footer-link{
+                        padding: 0 @indent__xs 0 @indent__xs+@indent__s;
+                        &::before{
+                            left: 0;
+                        }
+                    }
+
+                }
+            }
+
+            .footer-link{
+                letter-spacing: .25px;
+                color: inherit;
+                text-transform: none;
+                position: relative;
+                font-weight: @font-weight-light;
+                display: block;
+                overflow: hidden;
+                transition: all .4s ease 0s;
+
+
+                &:hover{
+                    text-decoration: none;
+
+
+                }
+
+                &::before{
+                    content: @icon-elogic-circle ;
+                    font-family: @font-family-awesome;
+                    .lib-font-size(7) ;
+                    font-weight: @font-weight-bold;
+                    color: @color-elogic-link ;
+                    position: absolute;
+                    top: 50%;
+                    left: -15px;
+                    transform: translateY(-45%);
+                    transition: left .25s cubic-bezier(.54,.49,0,1.75);
+
+                }
+            }
+        }
+
+
+        .contact-container{
+            padding: @indent__xl 0;
+            border-top: 1px solid @color-elogic-lightGray;
+
+
+            .back-top{
+                display: none;
+                height: 47px;
+                opacity: 1;
+                position: fixed;
+                right: 15px;
+                bottom: 80px;
+                text-align: center;
+                width: 47px;
+                line-height: 47px;
+                cursor: pointer;
+                -webkit-transition: all .3s ease;
+                -moz-transition: all .3s ease;
+                -ms-transition: all .3s ease;
+                -o-transition: all .3s ease;
+                transition: all .3s ease;
+                background: @color-elogic-black;
+                color: @color-elogic-white;
+                z-index: 999;
+            }
+
+
+            .contact-list{
+
+                text-align: center;
+                margin-bottom: 0;
+                list-style: none;
+                padding: 0;
+
+                .contact-item{
+                    margin-bottom: 0;
+
+
+                    .contact-link{
+                        color: @color-elogic-link;
+                        text-decoration: none ;
+                        font-weight: @font-weight-light;
+                        .lib-font-size(@font-size__s) ;
+                        letter-spacing: 1px;
+                        transition:  all .3s ease ;
+                        text-transform: uppercase;
+
+
+                        &:hover{
+                            text-decoration: none;
+                            color: @color-elogic-black;
+
+                        }
+
+                    }
+                }
+            }
+
+            .icons-wrapper{
+
+                text-align: center;
+
+                p{
+                    text-transform: uppercase;
+                    font-weight: @font-weight-light;
+                    color: @color-elogic-link;
+                    letter-spacing: 1px;
+
+                }
+
+                .follow-list{
+                    padding: 0;
+                    list-style: none;
+                    .lib-vendor-prefix-display(flex) ;
+                    .lib-vendor-box-align(center);
+                    margin-bottom: 0;
+
+                      .follow-item {
+                          margin-bottom: 0;
+
+                          &:not(:last-child) {
+                              margin-right: @indent__base;
+                          }
+                      }
+
+                    .follow-link{
+                        color: @color-elogic-link;
+                        .lib-font-size(@font-size-16) ;
+                        letter-spacing: 1px;
+                        text-decoration: none;
+                        transition:  all .3s ease ;
+
+                        &:hover{
+                            text-decoration: none;
+                            color: @color-elogic-black;
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+    }
 }
 
 
@@ -379,7 +597,36 @@
             display: none;
         }
     }
+
+//    ----------------------------------------------
+    .page-footer {
+        .contact-container {
+            .contact-list {
+                display: block;
+                .contact-item:not(:last-child) {
+                    margin-bottom: @indent__s	;
+                    margin-right: 0;
+                }
+            }
+
+            .icons-wrapper {
+                margin-top: @indent__m;
+                display: block;
+                 p{
+                     margin-right: 0;
+                 }
+
+
+                .follow-list {
+                    margin-top: @indent__s	;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
 }
+
 
 
 //
@@ -454,8 +701,38 @@
         display: none;
     }
   }
+//    -------------------------------------------------
+    .page-footer {
+        .contact-container {
+            .contact-list {
+                .lib-vendor-prefix-display(flex) ;
+                .lib-vendor-box-align(center);
+                justify-content: center;
+
+                .contact-item {
+                    &:not(:last-child) {
+                        margin-right: @indent__m;
+                    }
+                }
+            }
+
+            .icons-wrapper {
+                margin-top: @indent__m;
+                .lib-vendor-prefix-display(flex) ;
+                .lib-vendor-box-align(center);
+                justify-content: center;
+
+                p {
+                    margin-right: @indent__l;
+                }
+
+            }
+        }
+    }
 
 }
+
+
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
     .blog-list {
         .blog-item {
@@ -474,6 +751,34 @@
         display: none;
     }
 }
+//    ------------------------------
+    .page-footer {
+        .contact-container {
+            .contact-list {
+                .lib-vendor-prefix-display(flex) ;
+                .lib-vendor-box-align(center);
+                justify-content: center;
+
+                .contact-item {
+                    &:not(:last-child) {
+                        margin-right: @indent__m;
+                    }
+                }
+            }
+
+            .icons-wrapper {
+                margin-top: @indent__m;
+                .lib-vendor-prefix-display(flex) ;
+                .lib-vendor-box-align(center);
+                justify-content: center;
+
+                p {
+                    margin-right: @indent__l;
+                }
+
+            }
+        }
+    }
 }
 
 //
@@ -504,6 +809,27 @@
         &-title {
             font-weight: @font-weight-regular;
             .lib-font-size(@font-size__l * 2) ;
+        }
+    }
+
+//--------------------------------------------------------------
+
+    .page-footer {
+        .links-wrapper {
+                .lib-vendor-prefix-display(flex) ;
+            .footer-link-container{
+                flex-basis: 25%;
+
+            }
+
+            .links-title{
+                .title-link::after{
+                    display: none;
+                }
+            }
+            .links-list{
+                display: block!important; // overwrite collapsible styles
+            }
         }
     }
 
@@ -540,6 +866,26 @@
             display: block;
         }
     }
+//    ------------------------------------------------------
+    .page-footer{
+
+
+        .follow-container {
+            .lib-vendor-prefix-display(flex) ;
+            .lib-vendor-box-align(center);
+
+        }
+      .contact-container {
+          .back-top{
+              display: block;
+          }
+          .icons-wrapper {
+              margin-top: 0;
+              margin-left: auto;
+          }
+      }
+    }
+
 
 }
 // від 1440 - ....

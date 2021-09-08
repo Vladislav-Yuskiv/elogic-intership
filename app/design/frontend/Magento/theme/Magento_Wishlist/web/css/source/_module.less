@@ -1,0 +1,59 @@
+// Common
+& when (@media-common = true) {
+    .action_wrap{
+        .header.links{
+            .lib-vendor-prefix-display(flex) ;
+            .lib-vendor-box-align(center);
+            .lib-vendor-prefix-flex-direction(row-reverse) ;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            .wishlist{
+                margin-bottom: 0;
+                margin-left: @indent__s + @indent__xs;
+                a{
+                    font-size: 0;
+                    .far{
+                        color: @color-elogic-black;
+                        .lib-font-size(@h4__font-size) ;
+                        vertical-align: baseline;
+                        font-family: @font-family-awesome;
+                        font-weight: @font-weight-regular;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
+// До 480px
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+
+}
+
+//
+//  Mobile від 481 до 640
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+
+}
+//
+//  Tablet 768-1023
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}
+//----------
+// Desktop 1023 ...
+//-----------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}
+// від 1440 - ....
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+
+}
