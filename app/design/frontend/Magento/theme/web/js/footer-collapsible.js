@@ -26,16 +26,16 @@ define([
 
         _create: function () {
 
+            $(this.options.element).collapsible(this.options.collapsibleOptions);
 
             mediaCheck({
                 media: '(min-width: 767px)',
                 entry: function () {
-                    $(this.options.element).collapsible( "disable" );
                     $(this.options.element).collapsible( "destroy" );
                 }.bind(this),
                 exit: function () {
                     $(this.options.element).collapsible(this.options.collapsibleOptions);
-                }.bind(this),
+                }.bind(this)
             })
         },
     }) ;

@@ -12,7 +12,6 @@ define([
         },
 
         _create: function () {
-
             $(this.options.button).click(()=>{
                 $(this.options.drop).slideToggle();
             });
