@@ -16,7 +16,6 @@ define([
             }
         },
         _create: function () {
-            console.log('Ready') ;
             $(this.options.selector).select2(this.options.selectOptions);
         },
     });

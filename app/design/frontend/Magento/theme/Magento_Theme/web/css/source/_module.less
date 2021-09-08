@@ -61,6 +61,12 @@
 & when (@media-common = true) {
     body {
         .lib-css(background-color, @page__background-color);
+
+        &._has-modal{
+            .header.content.fixed{
+                position: static;
+            }
+        }
     }
 
     .page-wrapper {
@@ -81,6 +87,44 @@
         }
     }
 
+    //CATEGORY MODAL
+     .modals-wrapper{
+         .action-dismiss{
+             .lib-font-size(@h4__font-size) ;
+             letter-spacing: 1.1px;
+             color: @color-elogic-lightGray;
+             border: 0;
+             font-weight: @font-weight-regular;
+             text-align: center;
+             background-color: @color-elogic-black;
+             padding: @indent__s + @indent__xs @indent__l;
+             text-shadow: none;
+             border-radius: 0;
+             text-transform: uppercase;
+             transition: all 300ms linear;
+
+             &:hover{
+                 background-color: @color-elogic-gray;
+                 color: @color-elogic-black;
+                 font-size: @font-size-16;
+             }
+
+         }
+
+         .action-accept{
+             margin-left: @indent__xl;
+             background: @color-elogic-gray;
+             color: @color-elogic-black;
+             border: none;
+             transition: all 300ms linear;
+
+             &:hover{
+                 background-color: @color-elogic-black ;
+                 color: @color-elogic-white ;
+             }
+         }
+     }
+
     //
     //  Header
     //  ---------------------------------------------
@@ -98,6 +142,10 @@
             padding: @indent__base 0;
             margin: 0;
             max-width: 100%;
+
+            .compare.wrapper{
+                display: none;
+            }
 
 
 
@@ -776,9 +824,9 @@
     }
 
     .page-footer {
-        .lib-css(background, @footer__background-color);
         margin-top: auto;
         padding-bottom: @indent__m;
+        padding-top: @indent__m;
 
         .switcher {
             .options {

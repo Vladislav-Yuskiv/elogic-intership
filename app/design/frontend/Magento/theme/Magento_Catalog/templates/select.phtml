@@ -1,12 +1,12 @@
 <?php
 /**
- * Init Select for sorter
+ * Select for sorter
  */
 ?>
 
 <script type="text/x-magento-init">
     {
-    ".toolbar-sorter": {
+    "*": {
         "elogicSelect": {
             "selector":"#sorter",
             "selectOptions":{}
@@ -20,3 +20,41 @@
  * --------------------------------
  */
 ?>
+<?php
+/**
+ * Sidebar Slider
+ */
+?>
+
+<script type="text/x-magento-init">
+    {
+    ".sidebar-main-baner": {
+        "elogicSlider": {
+            "selector":".sidebar-baner-list",
+            "sliderOptions":{
+                "slidesToShow": 1,
+                "slidesToScroll": 1,
+                "dots": true,
+                "arrows": false,
+                "autoplay": true,
+                "autoplaySpeed": 5000
+            }
+        }
+    }
+    }
+</script>
+<?php
+    /**
+    *  Select options
+    */
+    ?>
+
+    <script type="text/x-magento-init">
+    {
+    ".field.limiter": {
+        "elogicSelect": {
+            "selector":".control #limiter"
+        }
+    }
+    }
+</script>

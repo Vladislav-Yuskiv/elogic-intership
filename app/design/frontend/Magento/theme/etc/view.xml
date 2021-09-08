@@ -11,6 +11,18 @@
                  <width>308</width>
                  <height>368</height>
             </image>
+            <image id="category_page_grid" type="small_image">
+                <width>308</width>
+                <height>368</height>
+            </image>
+            <image id="category_page_grid-1" type="small_image">
+                <width>308</width>
+                <height>368</height>
+            </image>
+            <image id="category_page_list" type="small_image">
+                <width>308</width>
+                <height>368</height>
+            </image>
         </images>
     </media>
 
