@@ -1,7 +1,11 @@
 
 // Common
 & when (@media-common = true) {
-
+        body{
+            .nav-sections{
+                margin-bottom: 0;
+            }
+        }
     .navigation{
         .submenu{
             overflow-x: visible !important; //  deleted scroll on subhover meganenu
@@ -55,6 +59,7 @@
                 text-transform: uppercase;
                 transition: all .3s ease;
                 border-bottom: 1px solid rgb(51, 51, 51);
+                border-left: none;
 
 
                 &:hover {
@@ -344,6 +349,7 @@
                 margin-right: @indent__m;
                 border-bottom: none;
                 padding: 16px 0; //!!!!!!!!!!!!!!!!!!!!!! sorry not variable
+                background-color: transparent;
 
                 &:hover {
                     color: @color-elogic-link;
