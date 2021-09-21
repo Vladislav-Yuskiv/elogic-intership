@@ -10,6 +10,7 @@
         <referenceBlock name="my-account-link" remove="true" />
         <referenceBlock name="header.panel.wrapper" remove="true" />
         <referenceBlock name="store.links" remove="true" />
+        <referenceBlock name="giftr-top-link" remove="true" />
 
         <referenceContainer name="header-wrapper">
             <container name="header-container" as="header-container" label="Header Container" htmlTag="div" htmlClass="container head-container">
