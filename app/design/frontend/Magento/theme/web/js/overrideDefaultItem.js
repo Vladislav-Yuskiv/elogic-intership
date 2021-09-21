@@ -49,13 +49,10 @@ define([
                     dataType: 'json',
                     showLoader: true,
                     success: function (response) {
-                        var giftr = $('[data-block="addtogiftr"]');
-                        giftr.find('[data-role="dropdownDialog"]').dropdownDialog("close");
-                        $('.giftr-dropdown').hide();
+                        $('.giftr-list').modal('closeModal');
                         if (response.status === this.login) {
                             setLocation(response.message);
                         }
-
 
                     }
 

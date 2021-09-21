@@ -48,7 +48,6 @@
         .modal-inner-wrap {
             border-radius: 5px;
             margin: 25rem auto;
-            width: 500px !important; //rewrote the default styles
             .modal-header {
                 padding-top: @indent__m;
 
@@ -137,6 +136,16 @@
             &:hover{
                 background-color: @color-elogic-link;
             }
+
+
+            &::before{
+                .lib-font-size(@font-size__xl);
+                .lib-css(font-family, @font-family-awesome);
+                .lib-css(font-weight, @font-weight-bold);
+                .lib-css(color, @color-elogic-white);
+                content: @icon-gift-registry-elogic;
+                margin-right: @indent__s;
+            }
         }
         }
     }
@@ -144,18 +153,19 @@
     .modal__giftr.modal-slide {
         .modal-inner-wrap {
             height: max-content;
-            width: auto;
+
             margin: 40% auto;
         }
     }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    .modal__giftr.modal-slide {
+    .modal-slide {
         left:0;
         .modal-inner-wrap {
             height: max-content;
             margin: 10% auto;
+            width: auto ;
 
             #confirm-add-to-registry {
                 margin: @indent__base 0 0;
@@ -167,11 +177,11 @@
         }
     }
 }
-//.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-//    .modal__giftr.modal-slide {
-//        .modal-inner-wrap {
-//            width: 500px !important; //rewrote the default styles
-//        }
-//    }
-//}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .modal-slide {
+        .modal-inner-wrap {
+            width: 500px ;
+        }
+    }
+}
 
