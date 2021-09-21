@@ -1,0 +1,95 @@
+// Common
+& when (@media-common = true) {
+    .action_wrap {
+        .minicart-wrapper {
+            margin-left: @indent__s + @indent__xs;
+            margin-top: 0;
+
+            .action.showcart {
+                vertical-align: middle;
+                .lib-vendor-prefix-display(flex) ;
+                .lib-vendor-box-align(center);
+                .counter{
+                    display: inline-block;
+                    margin-left: @indent__xs;
+                    background-color: @color-elogic-black;
+                }
+
+
+
+                &::before {
+
+                    display: block;
+                    line-height: 19px;
+                    color: @color-elogic-black;
+                    vertical-align: baseline;
+                    transition: all .4s ease 0s;
+                    .lib-font-size(@font-size-17) ;
+
+                }
+                &:hover::before{
+                    color: @color-elogic-link;
+                }
+
+                .cart-text {
+                    text-transform: uppercase;
+                    .lib-font-size(0) ;
+                    letter-spacing: 1px;
+                    position: relative;
+                    vertical-align: top;
+                    color: @color-elogic-black;
+                    transition: all .4s ease 0s;
+                    display: none;
+
+                    &:hover {
+                        color: @color-elogic-link;
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+// До 480px
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+
+}
+
+//
+//  Mobile від 481 до 640
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+
+}
+//
+//  Tablet 768-1023
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .action_wrap {
+        .minicart-wrapper {
+            .action.showcart {
+                &::before {
+                    display: none;
+                }
+                .cart-text {
+                    display: block;
+                    .lib-font-size(@h5__font-size) ;
+
+                }
+            }
+        }
+    }
+}
+//----------
+// Desktop 1023 ...
+//-----------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}
+// від 1440 - ....
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+
+}

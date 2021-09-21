@@ -1,0 +1,153 @@
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common =true) {
+
+    .gallery-page {
+         .gallery-list{
+             position: relative;
+             .lib-vendor-prefix-display(flex) ;
+
+             .button-arrow{
+                 background-color: @color-elogic-black;
+                 height: 30px;
+                 width: 250px;
+                 border-radius: 5px;
+                 color: @color-elogic-white;
+                 .lib-vendor-prefix-display(flex) ;
+                 .lib-vendor-box-align(center);
+                 justify-content: center;
+                 .lib-font-size(@font-size-17) ;
+                 letter-spacing: 1px;
+                 transition: all .3s ease;
+
+                 &:hover{
+                     background-color: @color-elogic-link;
+
+                 }
+             }
+         }
+        .gallery-title{
+            padding: 0 @indent__base @indent__base ;
+            margin: @indent__base 0 @indent__base;
+            position: relative;
+            &::after{
+                content: '';
+                width: 30px;
+                height: 3px;
+                .lib-css(background,@color-elogic-black);
+                position: absolute;
+                bottom: 0;
+                left: 15px;
+            }
+        }
+        .slick-arrow {
+            top: -50px;
+        }
+
+        .slick-dots {
+            margin-top: @indent__base;
+        }
+
+        .gallery-item.slick-slide {
+            position: relative;
+
+
+                transition: all 300ms ease;
+                opacity: 0.8;
+                margin: @indent__s;
+                padding: 1%;
+                transform: scale(.95);
+                filter: blur(1.08px);
+
+
+                // 3d Effect
+                perspective: 1000px;
+
+
+            &.slick-active {
+                transform: scale(1);
+            }
+
+            &.slick-center {
+
+                transform: scale(1.8);
+                opacity: 1;
+                z-index: 1;
+                filter: none;
+                img{
+                    transform: rotateX(20deg);
+
+                }
+
+            }
+
+
+                li {
+                    transform-style: preserve-3d;
+                    transform: rotateX(70deg);
+                    transition: all 0.8s;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 40px;
+                        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+                        transform: rotateX(90deg);
+                        transform-origin: bottom;
+                    }
+                }
+
+
+            }
+
+        .slick-dots {
+            .lib-vendor-prefix-display(flex) ;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -65px;
+            margin: 0 auto;
+
+            li{
+                margin-bottom: @indent__m	;
+                margin-right: @indent__xs;
+
+
+                &.slick-active{
+                    background-color: @color-elogic-black;
+                }
+                button[type="button"]{
+                    font-size: 0;
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+
+                    background: 0 0;
+                    border: 2px solid @color-elogic-black;
+                    padding: 0;
+                    border-radius: 0 ;
+                    transition: all .4s ease 0s;
+
+
+                    &:hover{
+                        background-color: @color-elogic-black;
+                    }
+                }
+            }
+        }
+
+
+        }
+    }
+
+

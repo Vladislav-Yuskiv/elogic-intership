@@ -1,0 +1,187 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+
+    .add-to-giftr{
+        margin-top: @indent__m;
+    }
+    #addto-giftr {
+        .lib-vendor-prefix-display(flex);
+        .lib-css(background, @color-elogic-black);
+       justify-content: center;
+        .lib-vendor-box-align(center);
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        transition: all .4s ease-out 0s;
+        letter-spacing: 1px ;
+        padding: @indent__s ;
+        .lib-font-size(@font-size-13);
+        text-transform: uppercase;
+
+        &:hover{
+            text-decoration: none;
+            .lib-css(background, @color-elogic-link);
+
+
+        }
+
+        span {
+            .lib-css(color, @color-elogic-white);
+        }
+
+        span:before {
+            .lib-font-size(@font-size__xl);
+            .lib-css(font-family, @font-family-awesome);
+            .lib-css(font-weight, @font-weight-bold);
+            .lib-css(color, @color-elogic-white);
+            content: @icon-gift-registry-elogic;
+            margin-right: @indent__s;
+        }
+    }
+
+
+
+        .modal-inner-wrap {
+            border-radius: 5px;
+            margin: 25rem auto;
+            .modal-header {
+                padding-top: @indent__m;
+
+                .modal-title{
+                    border-bottom: none;
+                    text-align: center;
+                    color: @color-elogic-black;
+                }
+            }
+            .modal-footer{
+                display: none;
+            }
+
+
+            .registries-container{
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-prefix-flex-direction(column);
+                .lib-css(background, @color-elogic-black);
+                .lib-css(color, @color-elogic-white);
+                max-height: 0;
+                width: 100%;
+                opacity: 0;
+                transition: all 0.4s;
+                border-radius: 8px;
+                overflow: hidden;
+
+                order: 1;
+
+                &.active{
+                    max-height: 240px;
+                    opacity: 1;
+                }
+
+                &::-webkit-scrollbar{
+                    display:none;
+                }
+            }
+
+            .option{
+                transition: all .4s ease;
+                &:hover{
+                    .lib-css(background, @color-elogic-gray);
+                }
+
+                span{
+                    cursor: pointer;
+                }
+
+                input{
+                    opacity:0;
+                    visibility:hidden;
+                }
+            }
+
+            .option,
+            .initial-select{
+                padding: 12px 24px;
+                cursor: pointer;
+            }
+
+            .initial-select{
+                .lib-css(background, @color-elogic-black);
+                .lib-css(color, @color-elogic-white);
+                border-radius: 8px;
+                margin-bottom: 8px;
+                position: relative;
+
+                order: 0;
+
+
+            }
+
+        #confirm-add-to-registry{
+            display: block;
+            background-color: @color-elogic-black;
+            color: @color-elogic-white;
+            border-radius: 5px;
+            padding: @indent__s;
+            text-align: center;
+            .lib-font-size(@font-size-16) ;
+            text-decoration: none;
+            margin-top: @indent__s;
+            transition: all .4s ease 0s;
+
+
+            &:hover{
+                background-color: @color-elogic-link;
+            }
+
+
+            &::before{
+                .lib-font-size(@font-size__xl);
+                .lib-css(font-family, @font-family-awesome);
+                .lib-css(font-weight, @font-weight-bold);
+                .lib-css(color, @color-elogic-white);
+                content: @icon-gift-registry-elogic;
+                margin-right: @indent__s;
+            }
+        }
+        }
+    }
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .modal__giftr.modal-slide {
+        .modal-inner-wrap {
+            height: max-content;
+
+            margin: 40% auto;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .modal-slide {
+        left:0;
+        .modal-inner-wrap {
+            height: max-content;
+            margin: 10% auto;
+            width: auto ;
+
+            #confirm-add-to-registry {
+                margin: @indent__base 0 0;
+                width: auto;
+                padding: @indent__s @indent__base;
+                border-radius: 5px;
+                text-align: center;
+            }
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .modal-slide {
+        .modal-inner-wrap {
+            width: 500px ;
+        }
+    }
+}
+
